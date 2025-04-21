@@ -1,0 +1,61 @@
+/* Tailwind CSS */
+@import 'https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css';
+
+/* Custom Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #1a202c, #2d3748);
+}
+
+header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ad-placeholder {
+    border: 2px dashed #4a5568;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.ad-placeholder:hover {
+    background-color: #2d3748;
+}
+
+#finance-form input, #finance-form select {
+    transition: all 0.3s ease;
+}
+
+#finance-form input:focus, #finance-form select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+button {
+    transition: all 0.3s ease;
+}
+
+#transaction-list .transaction {
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+#popup-ad {
+    z-index: 1000;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Ensure enough content for scrolling */
+section {
+    min-height: 100vh;
+}
